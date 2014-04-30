@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Sample</title>
+	<style>
+	<!--
+		html, body, ul, li {
+			margin: 0;
+			padding: 0;
+		}
+		ul {
+			list-style: none;
+		}
+		img {
+			vertical-align: top;
+		}
+		li {
+			float: left;
+			width: 100px;
+			height: 100px;
+			margin: 20px 0 0 20px;
+			overflow: hidden;
+		}
+	-->
+	</style>
+</head>
+<body>
+	<ul>
+		<li><img src="http://dummyimage.com/300x400/000/fff.png" alt=""></li>
+		<li><img src="http://dummyimage.com/500x300/111/fff.png" alt=""></li>
+		<li><img src="http://dummyimage.com/200x200/222/fff.png" alt=""></li>
+		<li><img src="http://dummyimage.com/800x100/333/fff.png" alt=""></li>
+		<li><img src="http://dummyimage.com/400x300/444/fff.png" alt=""></li>
+		<li><img src="http://dummyimage.com/100x800/555/fff.png" alt=""></li>
+		<li><img src="http://dummyimage.com/700x200/666/fff.png" alt=""></li>
+		<li><img src="http://dummyimage.com/200x700/777/fff.png" alt=""></li>
+		<li><img src="http://dummyimage.com/300x300/888/fff.png" alt=""></li>
+		<li><img src="http://dummyimage.com/100x100/999/fff.png" alt=""></li>
+	</ul>
+
+	<script src="sample/jquery.min.js"></script>
+	<script src="jquery.imgcentering.js"></script>
+	<script>
+	$(function () {
+		$('li').imgcentering();
+	});
+	</script>
+</body>
+</html>
