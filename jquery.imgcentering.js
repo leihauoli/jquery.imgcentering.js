@@ -1,10 +1,11 @@
 /*!
- * jquery.imgcentering.js v0.9 - jQuery plugin for Centering images and maximum sizing in block.
+ * jquery.imgcentering.js v0.91 - jQuery plugin for Centering images and maximum sizing in block.
  * Copyright (c) 2014 Lei Hau'oli Co.,Ltd. - https://github.com/leihauoli/jquery.imgcentering.js
  * License: MIT
  */
 ;(function (jQuery) {
 	var ImgCentering = function ($element) {
+		this.$win = $(window);
 		this.$element = $element;
 		this.$image = this.$element.find('img');
 		this.deferredCompleteImage = new $.Deferred();
@@ -23,6 +24,9 @@
 		bindEvents: function () {
 			var _self = this;
 
+			this.$win.on('resize orientationchange', function () {
+				_self.adjustImageSizeAndPosition();
+			});
 			this.deferredCompleteImage.done(function () {
 				_self.adjustImageSizeAndPosition();
 			});
