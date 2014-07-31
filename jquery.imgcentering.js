@@ -24,9 +24,6 @@
 		bindEvents: function () {
 			var _self = this;
 
-			this.$win.on('resize orientationchange', function () {
-				_self.adjustImageSizeAndPosition();
-			});
 			this.deferredCompleteImage.done(function () {
 				_self.adjustImageSizeAndPosition();
 			});
@@ -51,7 +48,7 @@
 				heightElement = this.$element.height();
 
 			this.$image
-				.width('100%')
+				.width(this.$element.width())
 				.height('auto');
 
 			heightImage = this.$image.height();
@@ -59,7 +56,7 @@
 			if (heightImage < heightElement) {
 				this.$image
 					.width('auto')
-					.height('100%');
+					.height(this.$element.height());
 			}
 
 			widthImage = this.$image.width();
